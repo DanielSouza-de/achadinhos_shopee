@@ -1,0 +1,127 @@
+.marginBottom8 {
+  margin-bottom: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #cd6133;
+  color: #f5f6fa;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 70%;
+  }
+}
+header {
+  padding-bottom: 24px;
+}
+header .profile-avatar {
+  display: block;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+.profile-bio {
+  text-align: center;
+}
+.profile-bio-name {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.profile-bio-subtitle {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.profile-bio-description {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.projects-list {
+  margin-top: 32px;
+  text-align: center;
+}
+.projects-list-item {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.projects-list-item a.project-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f5f6fa;
+  font-weight: bold;
+  padding: 0;
+}
+.projects-list-item a.project-link:hover {
+  color: #F79F1F;
+}
+.projects-list-item a.project-link .product-image {
+  position: absolute;
+  left: -56px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #F79F1F;
+  background: #fff;
+  object-fit: cover;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .projects-list-item a.project-link .product-image {
+    left: -46px;
+    width: 40px;
+    height: 40px;
+  }
+}
+.projects-list-item a.project-link .item-text-box {
+  background-color: #F79F1F;
+  padding: 16px 32px 16px 40px;
+  border-radius: 30px;
+  border: 2px solid #F79F1F;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+  max-width: none;
+}
+@media (max-width: 767px) {
+  .projects-list-item a.project-link .item-text-box {
+    padding: 12px 20px 12px 50px;
+    max-width: none;
+    width: auto;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+.projects-list-item a.project-link .item-text-box .item-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f5f6fa;
+  white-space: nowrap;
+}

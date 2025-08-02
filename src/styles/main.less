@@ -1,0 +1,145 @@
+@import "mapas.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #colors[backgroundColor];
+    color: #colors[textColor];
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+}
+
+header {
+    padding-bottom: 24px;
+
+    .profile-avatar {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+        max-width: 100px;
+        max-height: 100px;
+        width: auto;
+        height: auto;
+    }
+}
+
+.profile-bio {
+    text-align: center;
+
+    &-name {
+        font-size: 16px;
+        .marginBottom8();
+    }
+
+    &-subtitle {
+        font-size: 14px;
+        .marginBottom8();
+    }
+
+    &-description {
+        font-size: 14px;
+        opacity: 0.7;
+    }
+}
+
+.projects-list {
+    margin-top: 32px;
+    text-align: center; // centraliza os items inline
+
+    &-item {
+        display: inline-block;  // para largura mínima
+        margin-bottom: 16px;
+
+        a.project-link {
+            position: relative;
+            display: inline-flex; // ajusta ao conteúdo e alinha horizontalmente
+            align-items: center;
+            text-decoration: none;
+            color: #colors[textColor];
+            font-weight: bold;
+            padding: 0; // remove padding que atrapalha a centralização
+
+            &:hover {
+                color: #colors[buttonColor];
+            }
+
+            .product-image {
+                position: absolute;
+                left: -56px; // posiciona fora do box
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 2px solid #colors[buttonColor];
+                background: #fff;
+                object-fit: cover;
+                z-index: 2;
+
+                @media @breakpointMobile {
+                    left: -46px;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .item-text-box {
+                background-color: #colors[buttonColor];
+                padding: 16px 32px 16px 40px; // espaço para bola
+                border-radius: 30px;
+                border: 2px solid #colors[buttonColor];
+                position: relative;
+                z-index: 1;
+                text-align: left;
+                white-space: nowrap;    // evita quebra de linha
+                width: auto;            // container cresce com o texto
+                max-width: none;        // remove limite de largura
+
+                @media @breakpointMobile {
+                    padding: 12px 20px 12px 50px;
+                    max-width: none;
+                    width: auto;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+
+                .item-text {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #colors[textColor];
+                    white-space: nowrap;  // evita quebra de linha no texto
+                }
+            }
+        }
+    }
+}
