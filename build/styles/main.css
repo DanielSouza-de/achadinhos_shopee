@@ -65,7 +65,7 @@ header .profile-avatar {
   text-align: center;
 }
 .projects-list-item {
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
 }
 .projects-list-item a.project-link {
