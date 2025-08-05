@@ -18,10 +18,10 @@ li {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
+  padding: 32px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 24px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
@@ -30,7 +30,7 @@ li {
 }
 @media (max-width: 767px) {
   .container {
-    max-width: 70%;
+    max-width: 90%;
   }
 }
 header {
@@ -81,10 +81,11 @@ header .profile-avatar {
   color: #F79F1F;
 }
 .projects-list-item a.project-link .product-image {
-  position: absolute;
-  left: -56px;
-  width: 48px;
-  height: 48px;
+  position: relative;
+  margin-right: 16px;
+  left: 0px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   border: 2px solid #F79F1F;
   background: #fff;
@@ -100,7 +101,7 @@ header .profile-avatar {
 }
 .projects-list-item a.project-link .item-text-box {
   background-color: #F79F1F;
-  padding: 16px 32px 16px 40px;
+  padding: 16px 32px 16px;
   border-radius: 30px;
   border: 2px solid #F79F1F;
   position: relative;
@@ -109,6 +110,7 @@ header .profile-avatar {
   white-space: nowrap;
   width: auto;
   max-width: none;
+  min-width: 300px;
 }
 @media (max-width: 767px) {
   .projects-list-item a.project-link .item-text-box {

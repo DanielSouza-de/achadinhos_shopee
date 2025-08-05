@@ -27,19 +27,20 @@ li {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    padding: 32px 16px; // adiciona espaço ao redor
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 24px;
 
     @media @breakpointTablet {
         max-width: 80%;
     }
 
     @media @breakpointMobile {
-        max-width: 70%;
+        max-width: 90%;
     }
 }
+
 
 header {
     padding-bottom: 24px;
@@ -96,10 +97,11 @@ header {
             }
 
             .product-image {
-                position: absolute;
-                left: -56px; // posiciona fora do box
-                width: 48px;
-                height: 48px;
+                position: relative;
+                margin-right: 16px;
+                left: 0px; // posiciona fora do box
+                width: 54px;
+                height: 54px;
                 border-radius: 50%;
                 border: 2px solid #colors[buttonColor];
                 background: #fff;
@@ -115,7 +117,7 @@ header {
 
             .item-text-box {
                 background-color: #colors[buttonColor];
-                padding: 16px 32px 16px 40px; // espaço para bola
+                padding: 16px 32px 16px; // espaço para bola
                 border-radius: 30px;
                 border: 2px solid #colors[buttonColor];
                 position: relative;
@@ -124,6 +126,7 @@ header {
                 white-space: nowrap;    // evita quebra de linha
                 width: auto;            // container cresce com o texto
                 max-width: none;        // remove limite de largura
+                min-width: 300px;
 
                 @media @breakpointMobile {
                     padding: 12px 20px 12px 50px;
