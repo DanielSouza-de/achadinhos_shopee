@@ -91,9 +91,11 @@ header {
             color: #colors[textColor];
             font-weight: bold;
             padding: 0; // remove padding que atrapalha a centralização
+            transition: transform 0.2s ease;
 
             &:hover {
                 color: #colors[buttonColor];
+                transform: scale(1.03);
             }
 
             .product-image {

@@ -8,8 +8,8 @@
   font-family: 'Roboto', sans-serif;
 }
 body {
-  background-color: #cd6133;
-  color: #f5f6fa;
+  background-color: #E65C28;
+  color: #000;
 }
 li {
   list-style: none;
@@ -73,12 +73,14 @@ header .profile-avatar {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #f5f6fa;
+  color: #000;
   font-weight: bold;
   padding: 0;
+  transition: transform 0.2s ease;
 }
 .projects-list-item a.project-link:hover {
-  color: #F79F1F;
+  color: #fff;
+  transform: scale(1.03);
 }
 .projects-list-item a.project-link .product-image {
   position: relative;
@@ -87,7 +89,7 @@ header .profile-avatar {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  border: 2px solid #F79F1F;
+  border: 2px solid #fff;
   background: #fff;
   object-fit: cover;
   z-index: 2;
@@ -100,10 +102,10 @@ header .profile-avatar {
   }
 }
 .projects-list-item a.project-link .item-text-box {
-  background-color: #F79F1F;
+  background-color: #fff;
   padding: 16px 32px 16px;
   border-radius: 30px;
-  border: 2px solid #F79F1F;
+  border: 2px solid #fff;
   position: relative;
   z-index: 1;
   text-align: left;
@@ -124,6 +126,6 @@ header .profile-avatar {
 .projects-list-item a.project-link .item-text-box .item-text {
   font-size: 16px;
   font-weight: 600;
-  color: #f5f6fa;
+  color: #000;
   white-space: nowrap;
 }
