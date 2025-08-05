@@ -23,6 +23,12 @@ li {
   flex-direction: column;
   gap: 24px;
 }
+.container h1 {
+  font-size: 20px;
+}
+.container p {
+  font-size: 16px;
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
     max-width: 80%;
@@ -96,7 +102,7 @@ header .profile-avatar {
 }
 @media (max-width: 767px) {
   .projects-list-item a.project-link .product-image {
-    left: -46px;
+    left: 0px;
     width: 40px;
     height: 40px;
   }
@@ -112,14 +118,15 @@ header .profile-avatar {
   white-space: nowrap;
   width: auto;
   max-width: none;
-  min-width: 300px;
+  min-width: 400px;
 }
 @media (max-width: 767px) {
   .projects-list-item a.project-link .item-text-box {
-    padding: 12px 20px 12px 50px;
-    max-width: none;
-    width: auto;
-    text-align: center;
+    padding: 12px 20px 12px;
+    max-width: 260px;
+    width: 100%;
+    min-width: 260px;
+    text-align: left;
     white-space: nowrap;
   }
 }

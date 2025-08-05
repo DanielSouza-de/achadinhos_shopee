@@ -32,6 +32,14 @@ li {
     flex-direction: column;
     gap: 24px;
 
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
     @media @breakpointTablet {
         max-width: 80%;
     }
@@ -77,20 +85,20 @@ header {
 
 .projects-list {
     margin-top: 32px;
-    text-align: center; // centraliza os items inline
+    text-align: center;
 
     &-item {
-        display: block;  // para largura mínima
+        display: block;
         margin-bottom: 16px;
 
         a.project-link {
             position: relative;
-            display: inline-flex; // ajusta ao conteúdo e alinha horizontalmente
+            display: inline-flex;
             align-items: center;
             text-decoration: none;
             color: #colors[textColor];
             font-weight: bold;
-            padding: 0; // remove padding que atrapalha a centralização
+            padding: 0;
             transition: transform 0.2s ease;
 
             &:hover {
@@ -101,7 +109,7 @@ header {
             .product-image {
                 position: relative;
                 margin-right: 16px;
-                left: 0px; // posiciona fora do box
+                left: 0px;
                 width: 54px;
                 height: 54px;
                 border-radius: 50%;
@@ -111,7 +119,7 @@ header {
                 z-index: 2;
 
                 @media @breakpointMobile {
-                    left: -46px;
+                    left: 0px;
                     width: 40px;
                     height: 40px;
                 }
@@ -119,22 +127,23 @@ header {
 
             .item-text-box {
                 background-color: #colors[buttonColor];
-                padding: 16px 32px 16px; // espaço para bola
+                padding: 16px 32px 16px;
                 border-radius: 30px;
                 border: 2px solid #colors[buttonColor];
                 position: relative;
                 z-index: 1;
                 text-align: left;
-                white-space: nowrap;    // evita quebra de linha
-                width: auto;            // container cresce com o texto
-                max-width: none;        // remove limite de largura
-                min-width: 300px;
+                white-space: nowrap;
+                width: auto;
+                max-width: none;
+                min-width: 400px;
 
                 @media @breakpointMobile {
-                    padding: 12px 20px 12px 50px;
-                    max-width: none;
-                    width: auto;
-                    text-align: center;
+                    padding: 12px 20px 12px;
+                    max-width: 260px;
+                    width: 100%;
+                    min-width: 260px;;
+                    text-align: left;
                     white-space: nowrap;
                 }
 
@@ -142,7 +151,7 @@ header {
                     font-size: 16px;
                     font-weight: 600;
                     color: #colors[textColor];
-                    white-space: nowrap;  // evita quebra de linha no texto
+                    white-space: nowrap;
                 }
             }
         }
