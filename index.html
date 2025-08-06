@@ -32,6 +32,10 @@
                     Tudo em um só lugar. Clicou? Achou. Linkaí.
                 </p>
             </div>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Buscar produto..." />
+                <ul id="suggestions" class="suggestions-list"></ul>
+            </div>
         </header>
         <nav class="projects-list">
             <ul>
@@ -40,49 +44,6 @@
         </nav>
     </div>
 
-    <script>
-    async function carregarProdutos() {
-        try {
-            const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTkosGNU0G0ctx_TDbyUjdFY09ueal3gMSBnsLtrgsWByYgDgnKHtb9HCeUii1NYdjfoKdfIav2LaV-/pub?output=csv');
-            const csvText = await response.text();
-
-            const linhas = csvText.trim().split('\n');
-            const cabecalhos = linhas.shift().split(',');
-
-            const produtos = linhas.map(linha => {
-                const valores = linha.split(',');
-                const produto = {};
-                cabecalhos.forEach((chave, index) => {
-                    produto[chave.trim()] = valores[index].trim();
-                });
-                return produto;
-            });
-
-            const lista = document.querySelector('.projects-list ul');
-            lista.innerHTML = '';
-
-            produtos.forEach((produto) => {
-                const li = document.createElement('li');
-                li.className = 'projects-list-item';
-
-                li.innerHTML = `
-                    <a href="${produto.link}" class="project-link" target="_blank" rel="noopener noreferrer">
-                        <img src="${produto.imagem}" alt="${produto.nome}" class="product-image" />
-                        <div class="item-text-box">
-                            <span class="item-text">${produto.nome}</span>
-                        </div>
-                    </a>
-                `;
-
-                lista.appendChild(li);
-            });
-
-        } catch (error) {
-            console.error('Erro ao carregar produtos:', error);
-        }
-    }
-
-    carregarProdutos();
-</script>
+    <script src="./main.js"></script>
 </body>
 </html>
